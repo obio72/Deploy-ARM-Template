@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  AZURE_SUBSCRIPTION_ID: << Subscription Id >>   # set this to your Azure Subscription Id
+  AZURE_SUBSCRIPTION_ID: 91e51370-46f3-4f56-9a2c-9bab71dfc530   # set this to your Azure Subscription Id
   AZURE_RESOURCE_GROUP: GitHubActionExercise-rg   # set this to your target resource group
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy-ARM-Template
+      - name: Deploy ARM Template
         uses: azure/arm-deploy@v1
         with:
           scope: resourcegroup
